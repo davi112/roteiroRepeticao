@@ -9,7 +9,8 @@ public class Davi5 {
 		for(int i = 1; i<=10; i++) {
 			sum+=i;
 		}
-		System.out.println(sum);
+		System.out.println("Soma :" + sum);
+		System.out.println("Média: "+sum/10.0);
 	}
 
 }
