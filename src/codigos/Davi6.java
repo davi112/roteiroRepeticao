@@ -14,6 +14,6 @@ public class Davi6 {
 			sum += i;
 		}
 		System.out.println("Soma :" + sum);
-		System.out.println("Média: " + (double) sum / n);
+		System.out.println("Media: " + (double) sum / n);
 	}
 }
