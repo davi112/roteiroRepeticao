@@ -7,7 +7,7 @@ public class Davi7 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner read = new Scanner(System.in);
-		System.out.println("Informe a quantidade números: ");
+		System.out.println("Informe a quantidade nï¿½meros: ");
 		int n = read.nextInt();
 		
 		double sum = 0;
@@ -15,7 +15,7 @@ public class Davi7 {
 			sum = sum + (1.0/i);
 		}
 		
-		System.out.println("A soma é: "+sum);
+		System.out.println("A soma Ã©: "+sum);
 	}
 
 }
