@@ -1,2 +1,3 @@
 module RoteiroRepeticao {
+	exports codigos;
 }
