@@ -1,58 +1,73 @@
-package codigos;
-
 import java.util.Scanner;
 
 public class Davi18 {
 
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner read = new Scanner(System.in);
-		int opcao = 0;
+		// TODO Auto-generated method stub
+				Scanner read = new Scanner(System.in);
+				int opcao = 0;
+				
 
-		while (opcao != 5) {
-			
-			Double num1, num2;
-			System.out.println("Informe o primeiro nÃºmero");
-			num1 = read.nextDouble();
+				while (opcao != 5) {
+					System.out.println("Informe qual opção você deseja");
+					opcao = read.nextInt();			
 
-			System.out.println("Informe o segundo nÃºmero");
-			num2 = read.nextDouble();
-			
-			System.out.println("Informe qual opÃ§Ã£o vocÃª deseja");
-			opcao = read.nextInt();			
+					Double resultado = realizaOperacoes(opcao, read);
+					
+					if (resultado != null) {
+						System.out.println("O resultado é: " + resultado);
+					}
 
-			if (realizaOperacoes(opcao, opcao, opcao) != null) {
-				System.out.println("O resultado Ã©: " + realizaOperacoes(opcao, num1, num2));
+				}
+
 			}
 
-		}
+			public static Double realizaOperacoes(int opcao, Scanner read) {
+				Double n1, n2;
+				switch (opcao) {
+				case 1:
+					System.out.println("Informe o primeiro número");
+					n1 = read.nextDouble();
 
-	}
+					System.out.println("Informe o segundo número");
+					n2 = read.nextDouble();
+					return n1 + n2;
+				case 2:
+					System.out.println("Informe o primeiro número");
+					n1 = read.nextDouble();
 
-	public static Double realizaOperacoes(int opcao, double n1, double n2) {
-		switch (opcao) {
-		case 1:
-			return n1 + n2;
-		case 2:
-			return n1 - n2;
-		case 3:
-			return n1 * n2;
-		case 4:
-			if (n2 != 0) {
-				return n1 / n2;
-			} else {
-				System.out.println("DivisÃ£o por 0");
-				return null;
-			}
-		case 5:
-			System.out.println("Saiu !");
-			System.exit(0);
-			return null;
-		default:
-			System.out.println("OperaÃ§Ã£o invÃ¡lida");
-			return null;
-		}
+					System.out.println("Informe o segundo número");
+					n2 = read.nextDouble();
+					return n1 - n2;
+				case 3:
+					System.out.println("Informe o primeiro número");
+					n1 = read.nextDouble();
 
+					System.out.println("Informe o segundo número");
+					n2 = read.nextDouble();
+					return n1 * n2;
+				case 4:
+					System.out.println("Informe o primeiro número");
+					n1 = read.nextDouble();
+
+					System.out.println("Informe o segundo número");
+					n2 = read.nextDouble();
+					if (n2 != 0) {
+						return n1 / n2;
+					} else {
+						System.out.println("Divisão por 0");
+						return null;
+					}
+				case 5:
+					System.out.println("Saiu !");
+					System.exit(0);
+					return null;
+				default:
+					System.out.println("Operação inválida");
+					return null;
+				}
 	}
 
 }
